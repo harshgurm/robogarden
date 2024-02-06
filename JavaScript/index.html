@@ -1,26 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <script>
-
-            const arr = ["A", "B", "C"];
-            function calculateGPA(arr){
-                for(i = 0; i < arr.length; i++){
-                    if(arr[i] === "A"){
-                        console.log(100);
-                    } else if(arr[i] === "B" ){
-                        console.log(90);
+        <title>JavaScript Examples</title>
+        <!-- External link to js file -->
+        <!-- <script src="function.js">          
+        </script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                @media only screen and (max-width: 600px) {
+                    body {
+                        background-color: lightblue;
                     }
                 }
-            }
+            </style>
+        <script>
 
-            calculateGPA(arr);
+        //    // string value
+        //     var name = "Harsh";
+        //     // number value
+        //     var age = 27;
+        //     //boolean value
+        //     var is_true = true;
+        //     console.log(" My name is " + name + " and my age is " + age + " is " + is_true);
+
+        function showUserInfo(name, age, is_true){
+            console.log(" My name is " + name + " and my age is " + age + " is " + is_true);
+        }
+
+        showUserInfo("Person", 27, true);
+        // showUserInfo("Test", 30, true);
+        // showUserInfo("Same", 40, false);
+        // showUserInfo("Rob", 21, true);
+
+
+        function calEmpSalary(name, hours, pay_rate){
+            var salary = hours * pay_rate;
+            if(salary > 700){
+                console.log(name + " you are well paid " + salary);
+            } else if( salary > 500) {
+                console.log(name + " you salary is average " + salary)
+            } else {
+                console.log(name + "You are under paid" + salary);
+            }
+        }
+
+        // calEmpSalary("Harsh", 20, 40);
+        // calEmpSalary("Test", 10, 30);
+        // calEmpSalary("Sam", 20, 30);
+        
+
+        // if( "2" == 2){
+        //     console.log("The values are equal");
+        // } else {
+        //     console.log("Its not equal");
+        // }
+
+        // var array = ["Harsh", "Test", "Rob", "Sam"];
+        
+        // //for loop
+        // for(i = 0; i < array.length; i++){
+        //     console.log("Value of " +  array[i] );
+        // }
+
+        // //forEach
+        // array.forEach(function (test){
+        //     console.log('Value of ' + test);
+        // })
+            // function changeValue(){
+            //     // document.getElementsById("test").style.color = "green";
+            //     document.getElementById("test").style.color = "green";
+            //     document.getElementById("test").style.background = "yellow";
+            //     document.getElementById("para").style.background = "red";
+            // }
+
+            // function validateUser(){
+            //     alert(document.getElementsById("first_name").value);
+            // }
+
+
+            function validateForm(){
+            //const first_name = document.getElementById('first_name');
+
+                let first_name = document.forms["myForm"]["first_name"].value;
+                let last_name = document.forms["myForm"]["last_name"].value;
+                if (first_name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                if (last_name == "") {
+                    alert("Last Name must be filled out");
+                    return false;
+                }
+            }
 
         </script>
     </head>
     <body>
-        <!-- <button onclick="calculateGPA()">Click me</button> -->
-        
+        <!-- <p id="test"> First Class for JavaScript</p>
+        <p id="para"> This is another paragraph</p>
+        <button onclick="changeValue()">Change text</button> -->
+        <!-- <form name="myForm" id="myForm" method="GET" onsubmit="validateUser()">
+            First Name: <input type="text" id="first_name" name="first_name">
+            Last Name: <input type="text" id="last_name" name="last_name">
+            <input type="submit" value="Submit">
+        </form> -->
+
+          
+          <form name="myForm" action="/" method="POST" onsubmit="return validateForm()">
+                First Name: <input type="text" id="first_name" name="first_name">
+                Last Name: <input type="text" id="last_name" name="last_name">
+              <input type="submit" value="Submit">
+          </form>          
     </body>
 </html>

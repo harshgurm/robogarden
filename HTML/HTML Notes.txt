@@ -1,0 +1,142 @@
+HTML Notes:
+
+Day 1
+
+Day 2
+Explain about comments. Why we write it?
+Explain about the style element?
+Explain about different tags and how we can apply style in them.
+
+            <style>
+                    body {
+                        background-color: aqua;
+                    }
+                    img { 
+                        width: 100px;
+                        height: 100px;
+                    }
+                    p {
+                        color:red;
+                    }
+                    .header {
+                        color: pink;
+                    }
+            </style>
+			
+Explain about container element div/span
+span{
+	color:red
+}
+
+
+Explain about Order and unorder list
+
+<p>Are you looking for:
+    <ul>
+        <li>food products</li>
+        <li>office supplies</li>
+        <li>kitchen supplies</li>
+        <li>school supplies</li>
+    </ul>
+</p>
+
+
+
+<p> Aisles guide, each department corresponds to the number of the aisle next to it:
+    <ol><span style="font-weight:bold">
+		<li>Food aisle</li>
+		<li>Office aisle</li>
+		<li>Kitchen aisle</li>
+		<li>School aisle</li></span>
+    </ol>
+</p>
+
+Explain about images
+
+<img src="https://media.istockphoto.com/id/1394440950/photo/natural-view-cosmos-filed-and-sunset-on-garden-background.jpg?s=1024x1024&w=is&k=20&c=qE67R9rjYs0ynmV1SFDMP7XDsGAt-ZGoRrKYMj1tO-k=" alt="My Image">
+
+Explain about different paths
+
+show them by adding it into different folders
+
+<a href="https://www.google.com/">Take me to Google</a>
+
+<a href="http://www.google.com">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+         alt="An image of the Google logo">
+   </a>
+
+Explain about the navigation.
+
+*************************************************
+
+
+Explain about different element.
+Add different pages and link them
+show img tag, a href tag and link tag 
+
+
+Explain about style tag differnt type of styles
+Inline, external and internal
+<h1 style="color:blue; background-color:pink; font-size:200%">HomePage</h1>
+<link rel="stylesheet" href="mystyle.css">
+
+body {
+  background-color: lightblue;
+}
+
+
+<a href="https://www.google.com/">Take me to Google</a>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7JRmcblncSc?si=BZwcDJTKEejsSTro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harshvir Singh Gurm</title>
+    </head>
+    <body>
+        
+        <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <p>This is a paragraph.<br> This is my next line. </p>
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bp1g3guEO0I?si=ngRZxUElCWpdsox0" title="YouTube video player"
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <!-- <img src="../thumbnail_RG 2022.jpg" alt="Robo Garden Image is missing"> -->
+        <img src="https://media.istockphoto.com/id/1394440950/photo/natural-view-cosmos-filed-and-sunset-on-garden-background.jpg?s=1024x1024&w=is&k=20&c=qE67R9rjYs0ynmV1SFDMP7XDsGAt-ZGoRrKYMj1tO-k=" alt="My Image">
+
+        <a href="https://www.google.com/">Take me to Google</a>
+    </body>
+</html>
+
+<script src="myscripts.js"></script>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<img src="img_chania.jpg" width="460" height="345">
+<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
+
+</body>
+</html>

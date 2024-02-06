@@ -1,0 +1,376 @@
+What is JavaScript?
+JavaScript is a scripting or programming language that allows you to implement complex features on web pages
+
+Angular and Node.js is a platform for building fast and scalable server applications using JavaScript.
+
+How do we use Javascript in a page?
+
+External JavaScript
+<script src="functions.js"></script>
+
+Internal
+
+What are JavaScript variables?
+String
+boolean
+integer
+Object
+
+var name = "Harshvir"
+var age = 27;
+var is_true = true;
+
+Explain about function
+
+function userInfo( name, age, is_true){
+                console.log("My name is " + name + " . I am " + age + " year old. " + " All the information about me is " + is_true );
+            }
+            userInfo("Harshvir", 27, true);
+            userInfo("Sam", 20, false);
+            userInfo("Test", 23, true);
+**********************************************
+Use Arithmetic Operators
+
+            function calculateSalary(employee_name, hour_rate, number_of_hours){
+                total_salary = hour_rate * number_of_hours;
+                alert(employee_name + ' has weekly salary of $' + total_salary);
+            }
+*********************************************
+Use Comparison and Logical Operators
+
+                if(total_salary > 2000){
+                    alert('You are well paid');                    
+                } else {
+                    alert("You are underpaid");
+                }
+
+Explain what:
+2 == "2" vs 2 === "2"
+
+
+**********************************
+
+You can declare an array in two (2) ways:
+
+var employees = ["Harsh", "Test", "Sam", "Gill"];
+
+var student = ["Harsh", "Test", "Navi"];
+
+******************************************
+
+Explain the use of for, switch and foreach loop:
+
+            for(i = 0; i < employees.length; i++){
+                console.log(' employees number ' + i + " Name is " + employees[i]);
+            }
+
+            employees.forEach( function(employee){
+                console.log(employee);
+            })
+
+Explain about switch:
+
+var grades = [40, 80, 100]
+bestGrade = grades[0];
+switch (bestGrade) {
+	case 40:
+		console.log("The best grade of quiz 1 is 40");
+		break;
+	case 80:
+		console.log("The best grade of quiz 2 is 80");
+		break;
+	default:
+		console.log("The quiz has been cancelled");
+}
+
+
+*****************************************
+
+JavaScript array functions:
+length()
+sort()
+slice()
+splice()
+map()
+indexOf()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let index = fruits.indexOf("Apple");
+
+charAt()
+toUpperCase()
+
+*************************************************
+
+How to Remove Elements from The Ends of an Array?
+
+document.getElementById("E1").innerHTML = students[0];
+
+*********************************************
+
+              function showName(){
+                    var name = document.getElementById("input_name").value;
+                    alert('Hello' + name)
+                }
+            
+
+        <input type="text" id="input_name">
+        <button onclick="showName()">Click me</button>
+
+********************************************
+forms
+
+
+        const username = document.getElementById('username');
+        const emailAddress = document.getElementById('email-address');
+        if (username.value === "") {
+            alert("Please enter your username.");
+            username.focus();
+            return false;
+        }
+        if (emailAddress.value === "") {
+            alert("Please enter your email address.");
+            emailAddress.focus();
+            return false;
+        }
+
+
+function validateForm(){
+	let x = document.forms["myForm"]["fname"].value;
+	if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	}
+}
+
+
+<form name="myForm" action="/" method="POST" onsubmit="return validateForm()" method="post">
+	Name: <input type="text" name="fname">
+	<input type="submit" value="Submit">
+</form>
+
+**********************************************
+
+getElementByTagName
+document.getElementsByTagName("p")[0].innerHTML = "Hello World!";
+getElementByClassName
+getElementById
+
+*************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Change the content of the paragraph</h1>
+<p id="p1">This is the old paragraph</p>
+
+
+<script>
+var element = document.getElementById("p1");
+element.innerHTML = "This is the new paragraph";
+</script>
+
+</body>
+</html>
+
+*************************************************
+
+Manipulating CSS using JavaScript
+
+document.getElementById("p2").style.color = "green";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "25px";
+
+
+*************************************************
+Add a full class to html tag in javascript
+
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         .addStyle {
+         width: 100%;
+         padding: 20px;
+         background-color: black;
+         color: white;
+         font-size: 35px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="P1">The Div before adding the CSS class</div>
+      <div id="P2">The Div after adding the CSS class</div>
+      <script>
+         var element = document.getElementById("P2");
+         element.classList.add("addStyle");
+      </script>
+   </body>
+</html>
+
+
+***********************************************
+
+
+
+
+
+
+JQuery is a lightweight JavaScript library
+
+$ Sign to define or access jQuery.
+$(selector).action()
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".change_1").text("Text changed");
+    $(".change_2").html("<b>HTML changed</b>");
+    $(".change_3").val("Value changed");
+	
+	$("p").css("font-size", "50px");
+
+	$("#element_1").css("background", "yellow");
+	
+	
+	$(".p1").hide();
+    $(".p1").show();
+	
+});
+
+</script>
+</head>
+<body>
+
+<p class="change_1">Change the text</p>
+<p class="change_2">Change the <b>HTML</b> element</p>
+
+<p id="element_1">Select element by id</p>
+
+<p>Input: <input type="text" class="change_3" value="Change the value"></p>
+
+</body>
+</html>
+
+
+Animation in Jquery
+
+****************************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#panel").slideDown("slow");
+});
+</script>
+<style> 
+
+#panel {
+  padding: 50px;
+  display: none;
+  background: green;
+}
+</style>
+</head>
+<body>
+ 
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+***************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("div").animate({left: '300'},"slow");
+});
+</script>
+<style> 
+
+#panel {
+  padding: 50px;
+  width: 35px;
+  position: absolute;
+  background: green;
+}
+</style>
+</head>
+<body>
+ 
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+***************************************************************************
+
+
+var person = {
+  firstName: "Jimmy",
+  lastName: "netroun",
+  age: 21,
+  gender: "male"
+};
+
+*************************************************************************
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Car Example</h2>
+<p>Demonstration of how to create an object in a class and apply functions and access the object properties and put them in HTML elements using JavaScript</p>
+<p id="carCompany"></p>
+<p id="carModel"></p>
+<p id="price"></p>
+<p id="color"></p>
+<script>
+
+class Car {
+  constructor(carModel, price, color, carCompany) {
+    this.carModel = carModel;
+    this.price = price;
+    this.color=color;
+    this.carCompany= carCompany;
+  }
+  car_company() {
+    return "I have a " + this.carCompany + " car";
+  }
+  car_model(){
+    return "model: " + this.carModel;
+  }
+  car_price(){
+    return "price: " + this.price + "$";
+  }
+  car_color(){
+    return "color: " + this.color;
+  }
+}
+mycar = new Car("accent",200000,"black","hyundai");
+document.getElementById("carCompany").innerHTML = mycar.car_company();
+document.getElementById("carModel").innerHTML = mycar.car_model();
+document.getElementById("price").innerHTML = mycar.car_price();
+document.getElementById("color").innerHTML = mycar.car_color();
+
+
+</script>
+</body>
+</html>
+
+****************************************************************************

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1 id="result"></h1>
+
+    <script>
+        //grades is an array
+        function gpaCalculator(grades){
+            let sum = 0;
+
+            //Go through each individual grades in for loop
+            for(let i = 0; i < grades.length; i++){
+                let letterGrade = grades[i]; //Retrieve one of the letter grade value
+
+                if(letterGrade === "A") {
+                    sum += 100; //sum = sum + 100
+                } else if(letterGrade === "B") {
+                    sum += 80; //sum = sum + 80
+                } else if (letterGrade === "C") {
+                    sum += 70; //sum = sum + 70
+                }
+            }
+
+            //Calculate numeric GPA
+            let numericGPA = sum / grades.length;
+
+            //Convert the numberic GPA to a letter GPA
+            let letterGPA = '';
+            if(numericGPA === 100){
+                letterGPA = "A";
+            } else if(numericGPA <= 99 && numericGPA >= 80) {
+                letterGPA = "B";
+            } else if(numericGPA <= 79 && numericGPA >= 70) {
+                letterGPA = "C";
+            }
+
+            //Print result to browser
+            document.getElementById("result").innerHTML = "Your Grade is " + letterGPA;
+        }
+
+        //Calling function with parameters as an array
+        let studentGrades = ["A", "C", "C", "C", "C"];
+        gpaCalculator(studentGrades);
+    </script>
+</body>
+</html>

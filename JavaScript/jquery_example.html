@@ -1,0 +1,110 @@
+<script>
+function validateForm(){
+  
+  //const username = document.getElementById('username');
+
+	let x = document.forms["myForm"]["fname"].value;
+	if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	}
+}
+</script>
+
+<form name="myForm" action="/" method="POST" onsubmit="return validateForm()" method="post">
+	Name: <input type="text" name="fname">
+	<input type="submit" value="Submit">
+</form>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".change_1").text("Text changed");
+    $(".change_2").html("<b>HTML changed</b>");
+    $(".change_3").val("Value changed");
+	
+	$("p").css("font-size", "50px");
+
+	$("#element_1").css("background", "yellow");
+	
+	
+	$(".p1").hide();
+    $(".p1").show();
+	
+});
+
+</script>
+</head>
+<body>
+
+<p class="change_1">Change the text</p>
+<p class="change_2">Change the <b>HTML</b> element</p>
+
+<p id="element_1">Select element by id</p>
+
+<p>Input: <input type="text" class="change_3" value="Change the value"></p>
+
+</body>
+</html>
+
+
+Animation in Jquery
+
+****************************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#panel").slideDown("slow");
+});
+</script>
+<style> 
+
+#panel {
+  padding: 50px;
+  display: none;
+  background: green;
+}
+</style>
+</head>
+<body>
+ 
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+***************************************
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("div").animate({left: '300'},"slow");
+});
+</script>
+<style> 
+
+#panel {
+  padding: 50px;
+  width: 35px;
+  position: absolute;
+  background: green;
+}
+</style>
+</head>
+<body>
+ 
+<div id="panel">Hello world!</div>
+
+</body>
+</html>

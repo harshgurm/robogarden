@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+            $(".change_1").text("Text changed");
+            
+            $("#change_2").html("<b>HTML changed</b>");
+            // $(".change_3").val("Value changed");
+            
+            $("p").css("font-size", "50px");
+
+            // $("#element_1").css("background", "yellow");
+            
+            
+            $(".change_1").hide();
+            // $(".p1").show();
+            
+        });
+        </script>
+    </head>
+    
+<body>
+    <p class="change_1">This is my text</p>
+    <p id="change_2">This is second text</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#panel").slideDown("slow");
+});
+</script>
+<style> 
+
+#panel {
+  padding: 50px;
+  display: none;
+  background: green;
+}
+</style>
+</head>
+<body>
+ 
+<div id="panel">Hello world!</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>Test Input</title>
+      <script >
+        //created a function called testResults
+         function testResults () {
+            // get the value of input from dom by using the uniquely identifying names
+            //in simple words, give me this form's this attributes value
+             var name = document.forms["myForm"]["fname"].value;             
+
+             var coffee = document.forms["myForm"]["coffee_type"].value;
+
+            // if both coffe and name field has values
+            if(coffee && name){
+                alert(name + " you selected " + coffee );
+            }
+         }
+      </script>
+   </head>
+   <body>
+        <!-- onsubmit will call the function mentioned in "" when we try to submit the form -->
+        <!-- name attribute to give our form a unique identification -->
+        <!-- action attribute could be post or get -->
+        <!-- GET when we want to send form data in url and anyone can see data send with GET action -->
+        <!-- POST when we want to submit data secret data -->
+      <form name="myForm" action="GET" onsubmit="return testResults()">
+        <!-- name attribute to give our input a name so it can be indentified -->
+        Name: <input type="text" name="fname">
+        Which coffee you want to order?
+        <!-- type attributes set the type whether its radio button, button or text field -->
+        <!-- all 3 options are given same name so depending on what type of coffee is selected we will get the value -->
+        <input type="radio" name="coffee_type" value="Turkish Coffee">Turkish coffee 3$
+        <input type="radio" name="coffee_type" value="American Coffee">American coffee 5$
+        <input type="radio" name="coffee_type" value="Iced latte">Iced latte 7$
+        <input type="submit" value="Submit">
+</form>
+   </body>
+</html>

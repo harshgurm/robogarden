@@ -1,0 +1,225 @@
+
+Install and set up Node.js.
+Import and export between modules.
+Identify different third-party libraries.
+Discuss HTTP methods.
+
+Import third party libraries using NPM.
+Install different packages using NPM.
+Install express.
+Illustrate middleware and create it.
+Test routes using Postman.
+Design and manipulate databases.
+Design and manipulate DDL, DML and ERD.
+Use third-party libraries like Sequelize with NodeJS.
+
+
+1. Explain Node JS - Node.js or Node is same thing. It is open source(free made available, can be redistributed and modified) -> 
+It is a run time environment for the JavaScript code. In simple words, where you can run the javascript code. 
+In previous lecture/tutorials you have seen running JavaScript code in the browser.
+NodeJS give us that flexibility. We can run JavaScript code in outside the browser.
+
+We often use NodeJS to build backend services. API's basically
+
+It's easier to understand and if you know JavaScript you basically knows NodeJS as well. What can you use document in NodeJS NO! why? that is only available in browser
+
+It's fast and scalable.
+
+Explain about NodeJs is not good for CPU extensive loads.
+
+Explain about local vs global variables.
+
+Explain about the content in console.log(module);
+
+Identify the Node.js modules and its variables and functions.
+What is module? Every file
+
+Difference between Const vs var 
+const can't be overwritten where var can be overwritten
+
+Explain about built in modules:
+path, os, fs(), events, 
+
+Events think of it like an event is happening or  a signal that is sent
+
+Explain about the common type of errors as well
+
+Async and Sync request
+
+explain about the http
+
+
+Guide about Installing Node.JS
+Check Node version
+node -v
+
+console.log('Hello World');
+
+explain about how to run the file
+node app.js or node app
+
+*********************************
+
+function hello(){
+    console.log('Hello World');
+    
+}
+
+explain about the arrow function as well.
+
+hello();
+
+explain about `` as well
+
+console.log(`Error occured in the application ${args}`);
+
+*****************************
+
+console.log(module);
+
+module.exports = hello;
+
+console.log(module);
+
+in other index.js
+
+// var app = require('./app');
+// const app = require('./app');
+
+app();
+
+*****************************
+
+// var path = require('path');
+console.log(path.parse(__dirname));
+console.log(path.parse(__filename));
+
+*****************************
+
+const os = require('os');
+
+console.log(os.totalmem());
+
+******************************
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.addListener('error', function(){
+    console.log("Error occured in the application");
+});
+
+or
+
+emitter.on('error', function(){
+    console.log("Error occured in the application");
+});
+
+emitter.emit('error');
+
+*******************************
+
+// emitter.on('error', function(args){
+//     console.log("Error occured in the application", args);
+//     console.log("Error occured in the application" + args);
+//     console.log(`Error occured in the application ${args}`);
+
+// })
+
+emitter.emit('error', {name: 'Harsh', website_url: 'https://www.google.com/'});
+
+******************************
+
+const http = require('http');
+const server = http.createServer();
+
+server.listen(3000);
+console.log('Listening on port 3000');
+
+***********************************
+
+add 
+
+server.on('connection', () => 
+console.log('Incoming request or the url is hit'));
+
+***********************************
+
+const http = require('http');
+
+const server = http.createServer( function(req, res){
+    if(req.url == '/' || req.url == '/home') {
+        res.write('This is home page');
+        res.end();//show the use without this
+    }
+    else if(req.url == '/about' ) {
+        res.write('This is about page');
+        res.end();//show the use without this
+    }
+});
+
+
+server.listen(3000);
+console.log('Listening on port 3000');
+
+************************************
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="menu">
+  <ul>
+    <li>The Flight</li>
+    <li>The City</li>
+    <li>The Island</li>
+    <li>The Food</li>
+  </ul>
+</div>
+
+<div class="main">
+  <h1>The City</h1>
+  <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>
